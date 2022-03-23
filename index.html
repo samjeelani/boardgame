@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Turn-based board battle game in Javascript and jQuery">
+    <meta name="author" content="Kamila Pochojka">
+    <title>Turn-based combat fight</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+            <div>
+                <h1>COMBAT FIGHT</h1>
+            </div>
+    </header>
+    <div class="container">
+        <div class="player-container active" id="player-1">
+            <div class="player">
+                <h2 class="name-1"></h2>
+                <div class="player-img"> <img src="image/alien.png" alt="player1">
+                </div>
+            </div>
+            <div class="weapon">
+                <h2>Life Score: <span id="life-1"></span></h2>
+                <div class="weapon-1"></div>
+                <h3>Attack: <span class="health-1"></span></h3>
+                <div class="turn-1"></div>
+                <div class="buttons">
+                    <button class="btn-attack-1">Attack</button>
+                    <button class="btn-defend-1">Defend</button>
+                </div>
+            </div>
+        </div>
+        <section id="intro">
+            <div class="intro-content">
+                <h2>Let's play the Alien Game</h2>
+                <p>Game Rules:</p> <br>
+                
+                    Each player can move 3 spaces horizontally or vertically. <br><br>
+                    In the Alien World, you can change your weapon if you pass by a weapon. <br> <br>
+                    Your current weapon is gives you 10 points, but you can increase your power! <br> <br>
+                    Weapons have different values, try to choose the strongest one: <br> <br>
+                
+                <div class="weapons">
+                    <figure>
+                        <img src="image/wp-1.png" alt="wp1">
+                        <caption>30</caption>
+                    </figure>
+
+                    <figure>
+                        <img src="image/wp-2.png" alt="wp2">
+                        <caption>40</caption>
+                    </figure>
+
+                    <figure>
+                        <img src="image/wp-3.png" alt="wp3">
+                        <caption>50</caption>
+                    </figure>
+
+                    <figure>
+                        <img src="image/wp-4.png" alt="wp4">
+                        <caption>60</caption>
+                    </figure>
+
+                </div>
+                
+                    <br>
+                    
+                    You have 2 possibilites: attack or defend, when you face the opponent. <br><br>
+
+                
+                <p>Good luck!</p>
+                <button id="start" onclick="startGame(this)">Start game</button>
+            </div>
+        </section>
+        <div id="board-game">
+        </div>
+        <div class="player-container" id="player-2">
+            <div class="player">
+                <h2 class="name-2"></h2>
+                <div class="player-img"> <img src="image/1f47d.png" alt="player2"></div>
+            </div>
+            <div class="weapon">
+                <h2>Life score: <span id="life-2"></span></h2>
+                <div class="weapon-2"></div>
+                <h3>Attack: <span class="health-2"></span></h3>
+                <div class="turn-2"></div>
+                <div class="buttons">
+                    <button class="btn-attack-2">Attack</button>
+                    <button class="btn-defend-2">Defend</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameOver">
+        <div class="gameOver-content">
+            <p>GAME OVER!</p>
+            <p>The winner is <span id="winner"></span>!</p>
+            <p>Don't worry <span id='looser'></span>! <br> Maybe next time!
+            <br> <br>
+            Thank you for your play!</p>
+            
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        
+        
+</body>
+</html>
